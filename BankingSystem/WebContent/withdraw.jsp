@@ -7,6 +7,8 @@
 <title>Withdraw Money - Anand Bank</title>
 </head>
 <body>
+<%
+%>
 
 </body>
 </html>
