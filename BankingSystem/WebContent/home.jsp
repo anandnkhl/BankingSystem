@@ -20,15 +20,15 @@ try{
 	ResultSet rs=stmt.executeQuery("select Bal from bankdetails where UID = '"+UID+"' and name ='"+Name+"';");
 	rs.next();
 	int Bal =  rs.getInt("Bal");
-	out.println("Welcome " + Name);
-	out.println("<br><br>");
+	out.println("<h1>Welcome " + Name + "</h1>");
 	out.println("Your account balance is Rs. "+ Bal);
 	out.println("<br><br>");
 	out.println("<table><tr><td>");
 	out.println("<form method ='POST' action ='deposit.jsp'>");
 	out.println("<input type ='submit' value='Deposit Money'></form></td>");
 	out.println("<td><form method ='POST' action ='withdraw.jsp'>");
-	out.println("<input type ='submit' value = 'Withdraw Money'></form></td></tr>");
+	out.println("<input type ='submit' value = 'Withdraw Money'></form></td></tr></table>");
+	out.println("<a href = 'logout.jsp'>Logout</a><br>");
 
 } catch (Exception e){
 	out.println("Your session ended, please login again!");

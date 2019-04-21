@@ -8,6 +8,13 @@
 </head>
 <body>
 <%
+String name = session.getAttribute("Name").toString();
+out.println("<center>");
+out.println(name + ", Please enter the amount you want to withdraw: <br>");
+out.println("<form action = 'WithdrawlRedirect' method = 'POST'>");
+out.println("<input type = 'number' name = 'withdrawalAmount'>");
+out.println("<input type = 'submit' value = 'withdraw'>");
+out.println("</form>");
 %>
 
 </body>

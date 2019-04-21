@@ -7,6 +7,14 @@
 <title>Deposit Money - Anand Bank</title>
 </head>
 <body>
-
+<%
+String name = session.getAttribute("Name").toString();
+out.println("<center>");
+out.println(name + ", Please enter the amount you want to deposit: <br>");
+out.println("<form action = 'DepositlRedirect' method = 'POST'>");
+out.println("<input type = 'number' name = 'depositAmount'>");
+out.println("<input type = 'submit' value = 'deposit'>");
+out.println("</form>");
+%>
 </body>
 </html>
